@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Jan 21 14:30:35 IST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017e-7bdd-b94e-000007396fb0 
+on database directory memory:/home/naman/final_api/cef0881a-6370-43f3-83c7-b4fbe624140c with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2c13da15 
+Loaded from file:/home/naman/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Ubuntu
+java.runtime.version=11.0.13+8-Ubuntu-0ubuntu1.20.04
+user.dir=/home/naman/final_api
+os.name=Linux
+os.arch=amd64
+os.version=5.11.0-46-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
