@@ -3,6 +3,9 @@
 This project explains CRUD (**C**reate, **R**ead, **U**pdate, **D**elete) operations using spring boot, Apache Derby and MySql Databases.
 In this app we are using Spring Data JPA for built-in methods to do CRUD operations using `@CrudRepositoryClass`.     
 
+![Table Relationship](https://github.com/namantuli18/EmployeeDepartmentApi/blob/master/img/data%20design.png)
+
+
 ## Dependencies 
 - Spring Web
 - Spring Data JPA 
@@ -92,4 +95,11 @@ spring.jpa.hibernate.ddl-auto = update
     > **DELETE Mapping**
     
    ``` curl --location --request DELETE 'localhost:8080/departments/D1/employees/T1'  \``` - Delete an Employee from a Department by Id
+   
+### Postman And Command Line Screenshots
+
+![Postman](https://github.com/namantuli18/EmployeeDepartmentApi/blob/master/img/s1.png)
+![Postman2](https://github.com/namantuli18/EmployeeDepartmentApi/blob/master/img/s2.png)
+![CLI](https://github.com/namantuli18/EmployeeDepartmentApi/blob/master/img/s3.png)
+
 
