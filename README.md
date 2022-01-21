@@ -98,7 +98,7 @@ spring.jpa.hibernate.ddl-auto = update
    
 ### Postman And Command Line Screenshots
 
-![Postman2](https://github.com/namantuli18/EmployeeDepartmentApi/blob/master/img/s2.png)
+![Postman2](https://github.com/namantuli18/EmployeeDepartmentApi/blob/master/img/s1.png)
 ![CLI](https://github.com/namantuli18/EmployeeDepartmentApi/blob/master/img/s4.png)
 
 
