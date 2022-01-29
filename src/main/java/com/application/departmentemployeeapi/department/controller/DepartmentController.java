@@ -59,14 +59,14 @@ public class DepartmentController {
     }
 
     @RequestMapping(method = RequestMethod.PUT, value = "departments/{id}")
-    public ResponseEntity<Void> updateDepartment(@RequestBody Department department, @PathVariable String id) {
+    public ResponseEntity<Department> updateDepartment(@RequestBody Department department, @PathVariable String id) {
         Department newDepartment = departmentService.getDepartment(id);
         if (newDepartment == null) {
             logger.info("Department with id " + newDepartment.getId() + " does not exist");
-            return new ResponseEntity<Void>(HttpStatus.NOT_FOUND);
+            return new ResponseEntity<Department>(HttpStatus.NOT_FOUND);
         } else {
             departmentService.addDepartment(department);
-            return new ResponseEntity<Void>(HttpStatus.OK);
+            return new ResponseEntity<Department>(HttpStatus.OK);
         }
     }
 

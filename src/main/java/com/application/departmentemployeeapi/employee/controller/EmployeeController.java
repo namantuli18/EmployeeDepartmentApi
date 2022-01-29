@@ -26,17 +26,17 @@ public class EmployeeController {
     }
 
     @RequestMapping(value = "/departments/{departmentId}/employees",method = RequestMethod.POST)
-    public void addEmployee(@RequestBody Employee employee,@PathVariable  String departmentId)
+    public Employee addEmployee(@RequestBody Employee employee, @PathVariable  String departmentId)
     {
         employee.setDepartment(new Department(departmentId,"",""));
-        employeeService.addEmployee(employee);
+         return employeeService.addEmployee(employee);
     }
 
     @RequestMapping(method = RequestMethod.PUT,value = "departments/{departmentId}/employees/{id}")
-    public void updateEmployee(@RequestBody Employee employee,@PathVariable  String departmentId)
+    public Employee updateEmployee(@RequestBody Employee employee, @PathVariable  String departmentId)
     {
         employee.setDepartment(new Department(departmentId,"",""));
-        employeeService.updateEmployee(employee);
+        return employeeService.updateEmployee(employee);
     }
 
     @RequestMapping(value = "departments/{departmentId}/employees/{id}",method = RequestMethod.DELETE)
