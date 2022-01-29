@@ -2,14 +2,17 @@ package com.application.departmentemployeeapi.department.service;
 
 import com.application.departmentemployeeapi.department.entity.Department;
 import com.application.departmentemployeeapi.department.repository.DepartmentRepository;
-import org.aspectj.lang.annotation.Before;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.mock.web.MockMultipartFile;
+import org.springframework.test.context.event.annotation.BeforeTestClass;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
@@ -22,7 +25,6 @@ import static org.mockito.Mockito.*;
 
 @SpringBootTest(classes= DepartmentServiceTests.class)
 @AutoConfigureMockMvc
-
 public class DepartmentServiceTests {
 
 
@@ -38,10 +40,9 @@ public class DepartmentServiceTests {
 
     @Autowired
     private WebApplicationContext wac;
-    @Autowired
     private MockMvc mockMvc;
 
-    @Before("")
+    @BeforeTestClass
     public void setup() {
         mockMvc = MockMvcBuilders.webAppContextSetup(wac).build();
 
@@ -89,18 +90,23 @@ public class DepartmentServiceTests {
 
     @Test
     public void whenUploadFileSuccess() throws Exception {
-//        try {
-//            mockMvc.perform(
-//                            MockMvcRequestBuilders
-//                                    .multipart("/upload")
-//                                    .file(
-//                                            new MockMultipartFile("file", "test.csv", ",multipart/form-data", "id,name,department".getBytes())
-//                                    )
-//                    ).andExpect(MockMvcResultMatchers.status().isOk());
-//
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
+        try {
+           String response = mockMvc.perform(
+                            MockMvcRequestBuilders
+                                    .multipart("/upload")
+                                    .file(
+                                            new MockMultipartFile("file"
+                                                    , "test.csv"
+                                                    , ",multipart/form-data"
+                                                    , "id,name,department".getBytes())
+                                    )
+                    ).andExpect(MockMvcResultMatchers.status().isOk()).andReturn().toString();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
 
 
     }
