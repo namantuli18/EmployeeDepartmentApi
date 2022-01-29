@@ -23,12 +23,14 @@ public class EmployeeService {
         return employeeRepository.findById(id).orElse(null);
     }
 
-    public void addEmployee(Employee employee) {
+    public Employee addEmployee(Employee employee) {
         employeeRepository.save(employee);
+        return employee;
     }
 
-    public void updateEmployee(Employee employee) {
+    public Employee updateEmployee(Employee employee) {
         employeeRepository.save(employee);
+        return employee;
     }
 
     public void deleteEmployee(String id) {
