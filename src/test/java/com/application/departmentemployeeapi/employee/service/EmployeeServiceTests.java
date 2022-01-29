@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
@@ -34,6 +35,15 @@ public class EmployeeServiceTests {
         when(employeeRepository.findByDepartmentId(departmentId)).thenReturn(myEmployee);
         assertEquals(2, employeeService.getAllEmployees("D1").size());
     }
+
+    @Test
+    public void test_getEmployee() {
+        Employee employee = new Employee("T1", "Aman", "Senior","D1");
+        String id = "T1";
+        when(employeeRepository.findById(id)).thenReturn(Optional.of(employee));
+        assertEquals(id, employeeService.getEmployee("T1").getId());
+    }
+
 
     @Test
     public void test_addEmployee() {

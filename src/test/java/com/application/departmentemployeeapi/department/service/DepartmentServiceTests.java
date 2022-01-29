@@ -15,6 +15,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
@@ -57,6 +58,13 @@ public class DepartmentServiceTests {
         assertEquals(2, departmentService.getAllDepartments().size());
     }
 
+    @Test
+    public void test_getDepartment() {
+        Department department = new Department("D1", "Money", "Finance");
+        String id = "D1";
+        when(departmentRepository.findById(id)).thenReturn(Optional.of(department));
+        assertEquals(id, departmentService.getDepartment("D1").getId());
+    }
 
     @Test
     public void test_addDepartment() {
