@@ -1,4 +1,4 @@
-package com.application.departmentemployeeapi.department;
+package com.application.departmentemployeeapi.department.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

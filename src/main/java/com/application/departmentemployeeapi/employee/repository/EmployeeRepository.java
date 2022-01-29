@@ -1,5 +1,6 @@
-package com.application.departmentemployeeapi.employee;
+package com.application.departmentemployeeapi.employee.repository;
 
+import com.application.departmentemployeeapi.employee.entity.Employee;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

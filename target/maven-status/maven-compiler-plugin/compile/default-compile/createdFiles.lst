@@ -1,5 +1,5 @@
-com/application/departmentemployeeapi/DepartmentEmployeeApiDataApplication.class
 com/application/departmentemployeeapi/department/DepartmentController.class
+com/application/departmentemployeeapi/DepartmentEmployeeApiDataApplication.class
 com/application/departmentemployeeapi/department/DepartmentRepository.class
 com/application/departmentemployeeapi/employee/Employee.class
 com/application/departmentemployeeapi/employee/EmployeeRepository.class

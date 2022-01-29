@@ -1,6 +1,8 @@
-package com.application.departmentemployeeapi.employee;
+package com.application.departmentemployeeapi.employee.controller;
 
-import com.application.departmentemployeeapi.department.Department;
+import com.application.departmentemployeeapi.department.entity.Department;
+import com.application.departmentemployeeapi.employee.service.EmployeeService;
+import com.application.departmentemployeeapi.employee.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

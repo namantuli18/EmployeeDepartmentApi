@@ -1,5 +1,7 @@
-package com.application.departmentemployeeapi.employee;
+package com.application.departmentemployeeapi.employee.service;
 
+import com.application.departmentemployeeapi.employee.entity.Employee;
+import com.application.departmentemployeeapi.employee.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
